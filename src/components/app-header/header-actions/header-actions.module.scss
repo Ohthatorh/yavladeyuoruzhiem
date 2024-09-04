@@ -1,0 +1,13 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  display: flex;
+  gap: 24px;
+}
+.link {
+  @include font9;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

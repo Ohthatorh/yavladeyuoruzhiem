@@ -1,0 +1,19 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.label {
+  @include font9;
+  padding: 4px 8px;
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  color: var(--white-color);
+}

@@ -1,0 +1,19 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  grid-area: 1 / 3 / 2 / 4;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  @include font16;
+  color: var(--white-color);
+}
+
+.oldPrice {
+  @include font14;
+  color: var(--grey-color);
+  text-decoration: line-through;
+}

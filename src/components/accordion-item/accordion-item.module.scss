@@ -1,0 +1,27 @@
+@import "../../styles/mixin";
+
+.item {
+  border-bottom: 1px solid var(--white-color);
+  &Button {
+    @include font16;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 0;
+    font-weight: 800;
+    color: var(--white-color);
+    &Opened {
+      width: 100%;
+      .chevron {
+        transform: rotate(180deg);
+      }
+    }
+    .chevron {
+      transition: transform 0.2s ease;
+    }
+  }
+  &Content {
+    transition: height 0.2s ease;
+  }
+}

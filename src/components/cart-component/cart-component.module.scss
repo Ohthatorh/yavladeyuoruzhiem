@@ -1,0 +1,42 @@
+@import "/src/styles/mixin";
+
+.backLink {
+  @include font14;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--white-color);
+}
+
+.title {
+  @include font30;
+  margin-bottom: 40px;
+  color: var(--white-color);
+}
+
+.content {
+  display: flex;
+  gap: 110px;
+  align-items: flex-start;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text {
+  @include font16;
+  color: var(--white-color);
+  margin-bottom: 24px;
+}
+
+.link {
+  @include primaryButton;
+  display: block;
+  padding: 12px 18px;
+}

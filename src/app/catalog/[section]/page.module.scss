@@ -1,0 +1,6 @@
+@import "../../../styles/mixin";
+
+.title {
+  @include font30;
+  color: var(--white-color);
+}

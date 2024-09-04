@@ -1,0 +1,31 @@
+@import "../../../styles/mixin";
+
+.link {
+  @include font14;
+  display: flex;
+  align-items: center;
+  color: var(--grey-color);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--white-color);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--primary-color) var(--primary-color) transparent
+      transparent;
+    transform: rotate(45deg);
+  }
+}
+
+.text {
+  @include font14;
+  white-space: nowrap;
+  color: var(--white-color);
+}

@@ -1,0 +1,42 @@
+@import "/src/styles/mixin";
+
+.checkbox {
+  &Label {
+    @include font14;
+    padding-left: 30px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: var(--white-color);
+  }
+  &Span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+    border-color: var(--white-color);
+    border-style: solid;
+    border-image-slice: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: var(--primary-color);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+      opacity: 0;
+    }
+  }
+  &:checked + .checkboxSpan {
+    border-color: var(--primary-color);
+  }
+  &:checked + .checkboxSpan::after {
+    opacity: 1;
+  }
+}

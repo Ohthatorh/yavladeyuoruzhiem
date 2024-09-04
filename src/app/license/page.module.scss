@@ -1,0 +1,32 @@
+@import "/src/styles/mixin";
+
+.main {
+  color: var(--white-color);
+}
+
+.title {
+  @include heading2;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  @include font20;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.text {
+  &Wrap {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+}
+.item {
+  @include font14;
+  &Title {
+    font-weight: 800;
+  }
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}

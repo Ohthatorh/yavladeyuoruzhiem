@@ -1,0 +1,15 @@
+stages:
+  - deploy
+
+variables:
+  GIT_DEPTH: "0"
+
+build: 
+  stage: deploy
+  tags: 
+    - dev
+  script:
+    - cd /srv/yavladeyuoruzhiyem
+    - git pull
+    - npm run build
+    - systemctl restart yavladeyuoruzhiyem

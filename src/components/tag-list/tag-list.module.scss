@@ -1,0 +1,31 @@
+@import "/src/styles/mixin";
+
+.tag {
+  &List {
+    padding: 16px 0;
+    background: linear-gradient(
+      308deg,
+      #ee2b47 0%,
+      #ff5348 30.52%,
+      #f67453 65.96%,
+      #e12943 100%
+    );
+    @media only screen and (max-width: 767px) {
+      padding: 10px 0;
+    }
+  }
+  &Item {
+    max-width: min-content;
+    padding: 16px 24px;
+    border-radius: 30px;
+    border: 1px solid var(--white-color);
+    @media only screen and (max-width: 767px) {
+      padding: 10px 18px;
+    }
+  }
+  &Link {
+    @include font16;
+    color: var(--white-color);
+    white-space: nowrap;
+  }
+}

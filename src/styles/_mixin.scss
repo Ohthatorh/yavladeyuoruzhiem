@@ -1,0 +1,115 @@
+@mixin clearStyles {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin headingBanner {
+  font-size: 85px;
+  font-weight: 800;
+  line-height: 101px;
+  letter-spacing: 0.85px;
+  color: var(--white-color);
+  @media only screen and (max-width: 1365px) {
+    font-size: 40px;
+    line-height: normal;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+@mixin heading2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 53px;
+  letter-spacing: 0.35px;
+  @media only screen and (max-width: 1365px) {
+    font-size: 30px;
+    line-height: normal;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+@mixin font30 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 40px;
+  @media only screen and (max-width: 1365px) {
+    font-size: 20px;
+    line-height: normal;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+@mixin font20 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  @media only screen and (max-width: 1365px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media only screen and (max-width: 1023px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin font16 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+
+@mixin font14 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+
+@mixin font12 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin font9 {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+  letter-spacing: 0.09px;
+}
+
+@mixin primaryButton {
+  color: var(--white-color);
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+}
+
+@mixin contentInput {
+  @include font14;
+  border: 1px solid var(--black-color);
+  border-radius: var(--border-radius-small);
+  transition: border 0.2s ease;
+  &::placeholder {
+    color: var(--grey-color);
+  }
+  &:focus {
+    border-color: var(--secondary-color);
+  }
+  &.is-not-valid {
+    border-color: var(--red-color);
+    animation: 0.1s tremor ease-out 1;
+  }
+}

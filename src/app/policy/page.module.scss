@@ -1,0 +1,21 @@
+@import "/src/styles/mixin";
+
+.main {
+  color: var(--white-color);
+}
+
+.title {
+  @include heading2;
+  margin-bottom: 16px;
+}
+
+.text {
+  @include font14;
+  &Wrap {
+    margin-bottom: 12px;
+  }
+}
+.list {
+  list-style-type: disc;
+  padding-left: 16px;
+}

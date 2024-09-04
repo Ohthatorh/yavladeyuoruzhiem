@@ -1,0 +1,28 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  margin-bottom: 117px;
+  display: flex;
+  gap: 24px;
+}
+
+.oldPrice {
+  @include font20;
+  color: var(--grey-color);
+  text-decoration-line: line-through;
+}
+
+.price {
+  @include font30;
+  color: var(--white-color);
+}
+
+.discountPrice {
+  @include font20;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  background: var(--primary-color);
+}

@@ -1,0 +1,14 @@
+@import "/src/styles/mixin";
+
+.title {
+  @include font30;
+  margin-bottom: 40px;
+  color: var(--white-color);
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 32px;
+}

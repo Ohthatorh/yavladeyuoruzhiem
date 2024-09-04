@@ -1,0 +1,177 @@
+@import "./fonts";
+@import "./mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: linear-gradient(
+    308deg,
+    #ee2b47 0%,
+    #ff5348 30.52%,
+    #f67453 65.96%,
+    #e12943 100%
+  );
+  --active-primary-color: linear-gradient(
+    308deg,
+    #b82137 0%,
+    #e34339 30.52%,
+    #e65f3c 65.96%,
+    #b82137 100%
+  );
+  --background-color: linear-gradient(
+        to bottom right,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 50%
+      )
+      bottom right / 50% 50% no-repeat,
+    linear-gradient(
+        to bottom left,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 50%
+      )
+      bottom left / 50% 50% no-repeat,
+    linear-gradient(
+        to top left,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 50%
+      )
+      top left / 50% 50% no-repeat,
+    linear-gradient(
+        to top right,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 50%
+      )
+      top right / 50% 50% no-repeat,
+    linear-gradient(
+        to bottom right,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 49%
+      )
+      bottom right / 50% 50% no-repeat,
+    linear-gradient(
+        to bottom left,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 49%
+      )
+      bottom left / 50% 50% no-repeat,
+    linear-gradient(
+        to top left,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 49%
+      )
+      top left / 50% 50% no-repeat,
+    linear-gradient(
+        to top right,
+        rgba(238, 43, 71, 0.2) 0%,
+        rgba(0, 0, 0, 0) 49%
+      )
+      top right / 50% 50% no-repeat,
+    #34374c;
+  --primary-color: #ee2b47;
+  --secondary-color: #34374c;
+  --active-secondary-color: #2c2e3e;
+  --white-color: #f6f6f6fd;
+  --grey-color: #9ea0a3;
+  --black-color: #000000;
+  --green-color: #66ff08;
+  --border-radius-medium: 20px;
+  --border-radius-small: 8px;
+}
+
+body,
+html {
+  min-width: 360px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+label,
+span,
+div {
+  @include clearStyles;
+}
+ul {
+  @include clearStyles;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+img {
+  width: 100%;
+}
+button {
+  @include clearStyles;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @media only screen and (max-width: 767px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+input {
+  @include clearStyles;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: unset;
+  -webkit-appearance: none;
+  &[type="number"] {
+    appearance: none;
+    -moz-appearance: textfield;
+    &:hover,
+    &:focus {
+      appearance: none;
+      -moz-appearance: textfield;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+main {
+  background: var(--background-color);
+}
+.container {
+  margin: 0 auto;
+  padding: 0 120px;
+  max-width: 1680px;
+  @media only screen and (max-width: 1560px) {
+    padding: 0 96px;
+  }
+  @media only screen and (max-width: 1365px) {
+    padding: 0 64px;
+  }
+  @media only screen and (max-width: 1023px) {
+    padding: 0 32px;
+  }
+  @media only screen and (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

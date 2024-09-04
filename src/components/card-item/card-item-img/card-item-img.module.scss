@@ -1,0 +1,9 @@
+.img {
+  width: 187px;
+  height: 187px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  &Wrap {
+    margin-bottom: 20px;
+  }
+}

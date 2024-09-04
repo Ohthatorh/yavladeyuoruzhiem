@@ -1,0 +1,20 @@
+.swiper-thumbs {
+  width: 100%;
+  .swiper-slide {
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    img {
+      object-fit: contain;
+      height: 100%;
+      cursor: pointer;
+    }
+    &-thumb-active {
+      border-color: var(--primary-color);
+    }
+  }
+}

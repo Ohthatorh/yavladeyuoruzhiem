@@ -1,0 +1,11 @@
+@import "/src/styles/mixin";
+
+.infoWrap {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.text {
+  @include font14;
+  color: var(--white-color);
+}

@@ -1,0 +1,31 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  position: sticky;
+  top: 130px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: var(--border-radius-medium);
+  background: linear-gradient(
+    139deg,
+    #fff -171.31%,
+    rgba(255, 255, 255, 0) 108.62%
+  );
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  @include font20;
+  margin-bottom: 2px;
+  color: var(--white-color);
+  font-weight: 800;
+}
+
+.code {
+  @include font16;
+  margin-bottom: 16px;
+  color: var(--grey-color);
+  font-weight: 500;
+}

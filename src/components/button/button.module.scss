@@ -1,0 +1,12 @@
+@import "/src/styles/mixin";
+
+.button {
+  @include font16;
+  @include primaryButton;
+  padding: 8px 26px;
+  // align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

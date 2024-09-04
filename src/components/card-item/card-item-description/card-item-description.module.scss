@@ -1,0 +1,65 @@
+@import "/src/styles/mixin";
+
+.price {
+  &Wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  &Now {
+    @include font16;
+    color: var(--white-color);
+  }
+  &From {
+    @include font14;
+    color: var(--grey-color);
+    text-decoration: line-through;
+  }
+}
+
+.name {
+  &Wrap {
+    margin-bottom: 8px;
+  }
+  &Text {
+    @include font14;
+    min-height: 48px;
+    width: 100%;
+    max-width: 185px;
+    color: var(--white-color);
+    display: -webkit-box;
+    overflow: hidden;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+.stock {
+  &Wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  &Text {
+    @include font12;
+    color: var(--grey-color);
+  }
+}
+
+.label {
+  &Stock {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--green-color);
+  }
+  &NoStock {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--grey-color);
+  }
+}

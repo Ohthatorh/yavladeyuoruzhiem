@@ -1,0 +1,35 @@
+@import "../../styles/mixin";
+
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+  }
+  input {
+    @include contentInput;
+    width: 100%;
+    padding: 12px 20px 4px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      ~ label {
+        top: 10px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: var(--grey-color);
+  transition: top 0.2s ease, font 0.2s ease;
+  cursor: text;
+}

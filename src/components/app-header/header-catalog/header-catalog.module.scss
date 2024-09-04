@@ -1,0 +1,9 @@
+@import "/src/styles/mixin";
+
+.hamburger {
+  @include font9;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

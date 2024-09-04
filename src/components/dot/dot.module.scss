@@ -1,0 +1,49 @@
+@import "../../styles/mixin";
+
+.dot {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px dotted var(--white-color);
+  }
+  &Prop {
+    @include font14;
+    position: relative;
+    width: 70%;
+    font-weight: inherit;
+    &Span {
+      padding-right: 3px;
+      position: relative;
+      color: var(--white-color);
+    }
+  }
+  &Value {
+    @include font14;
+    width: 30%;
+    padding-left: 3px;
+    text-align: right;
+    color: var(--white-color);
+    font-weight: inherit;
+  }
+  &Link {
+    @include font14;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-weight: inherit;
+  }
+  &Text {
+    @include font14;
+    font-weight: inherit;
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

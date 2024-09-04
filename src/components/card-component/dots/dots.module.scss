@@ -1,0 +1,8 @@
+@import "/src/styles/mixin";
+
+.title {
+  @include font20;
+  margin-bottom: 32px;
+  font-weight: 600;
+  color: var(--white-color);
+}

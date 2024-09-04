@@ -1,0 +1,32 @@
+@import "/src/styles/mixin";
+
+.available,
+.notAvailable {
+  @include font14;
+  position: relative;
+  padding-left: 12px;
+  color: var(--white-color);
+  &Wrap {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: var(--green-color);
+  }
+}
+
+.notAvailable {
+  &:before {
+    background-color: var(--red-color);
+  }
+}

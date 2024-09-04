@@ -1,0 +1,23 @@
+.wrap {
+  margin-bottom: 42px;
+}
+
+.img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+.miniImg {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+}
+
+.slider {
+  max-width: 500px;
+}

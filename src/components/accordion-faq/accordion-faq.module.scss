@@ -1,0 +1,18 @@
+@import "/src/styles/mixin";
+
+.accordion {
+  max-width: 1071px;
+  &Panel {
+    padding: 0 0 30px;
+    &Text {
+      @include font16;
+      color: var(--white-color);
+    }
+    &Link {
+      transition: color 0.2s ease;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

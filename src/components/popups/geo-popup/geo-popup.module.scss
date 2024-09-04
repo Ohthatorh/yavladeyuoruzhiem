@@ -1,0 +1,22 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  margin-top: 16px;
+  width: 455px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.header {
+  margin-bottom: 24px;
+}
+.defaultCities {
+  &List {
+    column-count: 3;
+  }
+  &Button {
+    @include font14;
+    width: 100%;
+    text-align: center;
+  }
+}

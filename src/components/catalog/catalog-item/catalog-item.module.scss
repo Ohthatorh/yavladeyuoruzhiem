@@ -1,0 +1,30 @@
+@import "/src/styles/mixin";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  &Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 334px;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  &Link {
+    @include font14;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 334px;
+    color: var(--white-color);
+  }
+}
+.item {
+  &Title {
+    @include heading2;
+    margin-bottom: 40px;
+    color: var(--white-color);
+  }
+}

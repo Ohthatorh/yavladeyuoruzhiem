@@ -1,0 +1,11 @@
+@import "/src/styles/mixin";
+
+.button {
+  @include font14;
+  display: flex;
+  padding: 7px 8px;
+  gap: 8px;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  border-radius: 40px;
+}

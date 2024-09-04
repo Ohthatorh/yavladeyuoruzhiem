@@ -1,0 +1,12 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: flex-start;
+}
+
+.text {
+  @include font16;
+  font-weight: 500;
+  color: var(--white-color);
+}

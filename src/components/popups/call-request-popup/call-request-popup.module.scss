@@ -1,0 +1,31 @@
+@import "/src/styles/mixin";
+
+.wrap {
+  max-width: 310px;
+  width: 100%;
+}
+.text {
+  @include font14;
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--grey-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  @include font12;
+  color: var(--grey-color);
+  &Link {
+    color: var(--grey-color);
+    text-decoration: underline;
+  }
+}

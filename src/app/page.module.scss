@@ -1,0 +1,140 @@
+@import "/src/styles/mixin";
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  &Title {
+    @include headingBanner;
+    margin-bottom: 140px;
+    span {
+      background: var(--primary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 80px;
+    }
+  }
+  &Text {
+    @include font14;
+    margin-bottom: 18px;
+    color: var(--white-color);
+    max-width: 569px;
+  }
+  &Link {
+    @include font16;
+    @include primaryButton;
+    padding: 10px 16px;
+    @media only screen and (max-width: 1365px) {
+      margin-bottom: 40px;
+    }
+  }
+  &Description {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    padding: 12px 6px 0;
+    border-radius: 20px;
+    background: linear-gradient(
+      142deg,
+      rgba(255, 255, 255, 0.65) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    @media only screen and (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-self: center;
+    }
+  }
+  &Img {
+    position: absolute;
+    right: 0;
+    top: 180px;
+    max-width: 960px;
+    @media only screen and (max-width: 1365px) {
+      top: 80px;
+    }
+    @media only screen and (max-width: 767px) {
+      top: 40px;
+      object-fit: contain;
+      max-width: 330px;
+      max-height: 200px;
+    }
+  }
+}
+.faq {
+  &Title {
+    @include heading2;
+    margin-bottom: 40px;
+    color: var(--white-color);
+    text-align: center;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+  &Accordion {
+    &Wrap {
+      padding: 64px 211px;
+      border-radius: var(--border-radius-medium);
+      box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+      @media only screen and (max-width: 1365px) {
+        padding: 32px 100px;
+      }
+      @media only screen and (max-width: 1365px) {
+        padding: 16px 20px;
+      }
+    }
+  }
+  &Button {
+    @include font20;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 24px 35px;
+    color: var(--white-color);
+    cursor: pointer;
+    border-bottom: 1px solid var(--white-color);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 0;
+      height: 0;
+      padding: 3px;
+      border-color: var(--primary-color);
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      transition: transform 0.2s ease;
+      transform: rotate(-45deg) translate(-50%, -50%);
+    }
+    &Open {
+      &::after {
+        transform: rotate(45deg) translate(-50%, 0);
+      }
+    }
+  }
+  &Panel {
+    @include font16;
+    padding: 24px 35px;
+    color: var(--white-color);
+    font-weight: 500;
+  }
+}
+.popularity {
+  &Title {
+    @include heading2;
+    margin-bottom: 40px;
+    color: var(--white-color);
+    text-align: center;
+  }
+  &Wrap {
+    display: flex;
+    gap: 32px;
+  }
+}
