@@ -11,9 +11,9 @@
   }
   &Span {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translate(0, -50%);
+    transform: translate(0, 30%);
     width: 14px;
     height: 14px;
     border-width: 2px;

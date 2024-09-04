@@ -3,9 +3,15 @@
 .button {
   @include font14;
   display: flex;
-  padding: 7px 8px;
+  align-items: center;
+  padding: 8px;
   gap: 8px;
   color: var(--white-color);
   border: 1px solid var(--white-color);
   border-radius: 40px;
+  @media only screen and (max-width: 767px) {
+    @include font12;
+    padding: 6px;
+    gap: 4px;
+  }
 }

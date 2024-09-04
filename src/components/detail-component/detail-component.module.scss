@@ -19,8 +19,55 @@
 }
 
 .filters {
-  max-width: 211px;
+  max-width: 300px;
   width: 100%;
+  &Button {
+    display: none;
+  }
+  &Options {
+    display: none;
+  }
+  @media only screen and (max-width: 1440px) {
+    max-width: 220px;
+  }
+  @media only screen and (max-width: 1365px) {
+    max-width: 180px;
+  }
+  @media only screen and (max-width: 767px) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: var(--background-color);
+    overflow-x: hidden;
+    transform: translateX(-200%);
+    transition: transform 0.2s ease;
+    &_opened {
+      transform: translateX(0);
+    }
+    &Button {
+      display: block;
+    }
+    &Options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    &Title {
+      @include font14;
+      color: var(--white-color);
+    }
+  }
+}
+
+.card {
+  @media only screen and (max-width: 767px) {
+    width: 47%;
+  }
 }
 
 .catalog {
@@ -28,6 +75,7 @@
   display: flex;
   flex-direction: column;
   &Wrap {
+    position: relative;
     display: flex;
     gap: 36px;
     justify-content: space-between;
@@ -36,6 +84,14 @@
     align-self: flex-end;
     width: 150px;
     margin-bottom: 24px;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 12px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-self: unset;
+    }
   }
 }
 
@@ -44,6 +100,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 34px;
+  justify-content: flex-end;
+  @media only screen and (max-width: 1440px) {
+    gap: 20px;
+  }
+  @media only screen and (max-width: 1365px) {
+    gap: 12px;
+  }
+  @media only screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .button {

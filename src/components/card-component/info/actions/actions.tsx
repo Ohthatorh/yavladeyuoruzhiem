@@ -36,15 +36,6 @@ export const Actions: FC<IActions> = ({ id, name, stock }) => {
     <div className={styles.buttonWrap}>
       <Button
         id={id}
-        text={
-          stock
-            ? isClient
-              ? isInCart
-                ? "В корзине"
-                : "В корзину"
-              : "В корзину"
-            : "Нет в наличии"
-        }
         extraClass={
           stock
             ? isClient

@@ -22,6 +22,7 @@ export const SelectComponent: FC = ({ sortOptions, placeholder }) => {
       styles={colourStyles}
       onChange={(item: any) => setUrlFromSelectedFilters(router, item.value)}
       defaultValue={sortOptions.find((item) => item.isChoosed)}
+      isSearchable={false}
     />
   );
 };

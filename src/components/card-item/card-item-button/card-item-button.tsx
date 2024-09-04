@@ -28,15 +28,6 @@ export const CardItemButton: FC<ICardItemButton> = ({ id, stock, name }) => {
   return (
     <Button
       id={id}
-      text={
-        stock
-          ? isClient
-            ? isInCart
-              ? "В корзине"
-              : "В корзину"
-            : "В корзину"
-          : "Нет в наличии"
-      }
       extraClass={
         stock
           ? isClient
