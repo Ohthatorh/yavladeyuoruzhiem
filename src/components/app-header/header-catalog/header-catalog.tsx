@@ -13,7 +13,7 @@ export const HeaderCatalog: FC = ({ categories }) => {
         <BurgerIcon isActive={isOpen} />
         Каталог
       </button>
-      <Catalog isOpen={isOpen} categories={categories} />
+      <Catalog isOpen={isOpen} categories={categories} onClose={handleClick} />
     </>
   );
 };

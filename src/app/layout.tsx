@@ -1,18 +1,23 @@
 import "normalize.css";
 import "../styles/global.scss";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { AppFooter } from "@/components/app-footer/app-footer";
 import { AppHeader } from "@/components/app-header/app-header";
 import { Notification } from "@/components/notification/notification";
 import { Providers } from "@/services/providers/provider";
 import NextTopLoader from "nextjs-toploader";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title:
     "Интернет-магазин «ЯВладеюОружием» — купить огнестрельное оружие, экипировку и эксклюзивные товары для охоты в Москве",
   description:
     "Интернет-магазин «ЯВладеюОружием» осуществляет продажу товаров для охоты, рыбалки и туризма в Москве. Заказывайте огнестрельное охотничье оружие онлайн или по телефону 8(800)700-82-56.",
-  viewport: "width=device-width, initial-scale=1.0, user-scalable = no",
   openGraph: {
     title:
       "Интернет-магазин «ЯВладеюОружием» — купить огнестрельное оружие, экипировку и эксклюзивные товары для охоты в Москве",

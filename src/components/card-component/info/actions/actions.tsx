@@ -9,6 +9,7 @@ import {
   removeFromFavourites,
 } from "@/services/redux/features/favouritesSlice";
 import { addToCart, getCart } from "@/services/redux/features/cartSlice";
+import { FavouriteFilledIcon } from "@/components/icon/favourite-icon/favourite-icon";
 
 interface IActions {}
 
@@ -49,7 +50,11 @@ export const Actions: FC<IActions> = ({ id, name, stock }) => {
         onClick={handleAddToCartClick}
       />
       <button className={styles.favourite} onClick={handleFavouritesClick}>
-        <FavouriteIcon fill={favourites.includes(id)} />
+        {favourites.includes(id) && isClient ? (
+          <FavouriteFilledIcon />
+        ) : (
+          <FavouriteIcon />
+        )}
       </button>
     </div>
   );

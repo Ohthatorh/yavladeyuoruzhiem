@@ -33,7 +33,6 @@ const CallRequestPopup: FC<any> = ({ isOpen, onClose }) => {
       return errors;
     },
     onSubmit: (values, { setSubmitting }) => {
-      console.log(values);
       setSubmitting(false);
       onClose();
       toast.success(
