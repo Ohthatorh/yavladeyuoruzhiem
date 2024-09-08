@@ -32,6 +32,11 @@
     text-align: right;
     color: var(--white-color);
     font-weight: inherit;
+    @media only screen and (max-width: 767px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
   }
   &Link {
     @include font14;

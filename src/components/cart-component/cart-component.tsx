@@ -8,13 +8,9 @@ import { CardList } from "./card-list/card-list";
 import { Form } from "./form/form";
 import { useAppSelector } from "@/services/redux/hooks";
 import { getCart } from "@/services/redux/features/cartSlice";
-import { getIdsList } from "@/app/api/catalog";
 import { LoadingComponent } from "../loading/loading";
 import { Breadcrumbs } from "../breadcrumbs/breadcrumbs";
-import {
-  getProductsForCart,
-  getProductsWithUnavailable,
-} from "@/utils/api/catalog";
+import { getProductsForCart } from "@/utils/api/catalog";
 
 interface ICartComponent {}
 

@@ -26,10 +26,18 @@ export const Photos = ({ photos, name }: { photos: any; name: string }) => {
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
             className="swiper-thumbs"
+            breakpoints={{
+              1024: {
+                direction: "vertical",
+              },
+              320: {
+                direction: "horizontal",
+              },
+            }}
           >
             {currentPhotos.map((photo, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className={styles.miniSlider__item}>
                   <Image
                     alt={name}
                     src={`https://ohotaktiv.ru${photo}`}

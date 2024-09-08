@@ -1,5 +1,9 @@
 @import "/src/styles/mixin";
 
+.wrap {
+  padding-top: 0;
+}
+
 .nav {
   margin-bottom: 40px;
 }
@@ -15,8 +19,18 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 92px;
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column; 
+    gap: 40px
+  }
+  @media only screen and (max-width: 767px) {
+    gap: 24px
+  }
 }
 
 .left {
   max-width: 838px;
+  @media only screen and (max-width: 1023px) {
+    max-width: unset;
+  }
 }

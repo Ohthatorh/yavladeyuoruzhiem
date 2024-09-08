@@ -14,6 +14,9 @@
     rgba(255, 255, 255, 0) 108.62%
   );
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  @media only screen and (max-width: 1023px) {
+    max-width: unset;
+  }
 }
 
 .title {

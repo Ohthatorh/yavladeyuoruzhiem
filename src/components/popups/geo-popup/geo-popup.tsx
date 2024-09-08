@@ -35,18 +35,6 @@ export const GeoPopup: FC<any> = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} title={"Выберите свой город"} onClose={onClose}>
       <div className={styles.wrap}>
-        {/* <InputComponent
-          id={"geo-popup-city"}
-          label={"Город"}
-          icon={<SearchIcon />}
-        >
-          <input
-            id="geo-popup-city"
-            type="text"
-            maxLength={50}
-            placeholder=""
-          />
-        </InputComponent> */}
         <div className={styles.defaultCitiesList}>
           {defaultCities.map((el) => {
             return (

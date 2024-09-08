@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .header {
   margin-bottom: 24px;
@@ -13,6 +16,9 @@
 .defaultCities {
   &List {
     column-count: 3;
+    @media only screen and (max-width: 767px) {
+      column-count: 1;
+    }
   }
   &Button {
     @include font14;

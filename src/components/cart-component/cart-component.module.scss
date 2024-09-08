@@ -19,6 +19,12 @@
   display: flex;
   gap: 110px;
   align-items: flex-start;
+  @media only screen and (max-width: 1365px) {
+    gap: 40px;
+  }
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
 }
 
 .empty {

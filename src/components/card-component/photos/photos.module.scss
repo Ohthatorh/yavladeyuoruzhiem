@@ -7,17 +7,44 @@
   height: 500px;
   object-fit: contain;
   cursor: zoom-in;
+  @media only screen and (max-width: 1365px) {
+    width: 300px;
+    height: 300px;
+  }
 }
 .miniImg {
   width: 120px;
   height: 120px;
   cursor: pointer;
+  @media only screen and (max-width: 1365px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media only screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .wrap {
   display: flex;
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .slider {
   max-width: 500px;
+  @media only screen and (max-width: 1365px) {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+.miniSlider {
+  margin-right: 24px;
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 }

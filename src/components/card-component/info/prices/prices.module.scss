@@ -4,6 +4,9 @@
   margin-bottom: 117px;
   display: flex;
   gap: 24px;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
 }
 
 .oldPrice {
